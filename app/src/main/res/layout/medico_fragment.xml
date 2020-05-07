@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textToll"
+    tools:context=".ui.Medico.Medico">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:id="@+id/bodyFormEmergencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblMedico"
+                android:layout_width="241dp"
+                android:layout_height="170dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Una emergencia médica es cuando se presenta algún acontecimiento que sucede sin intención y que genera un daño a un ser vivo o a una cosa que a usted cree que una lesión o una enfermedad grave que amenazan la salud suya.
+            \n
+            \nSe puede presentar en.\n"
+                android:textSize="16dp">
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+            <TextView
+                android:id="@+id/lblAccidentes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:text="Accidentes:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_below="@id/lblMedico"/>
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblAccidentes1"
+                android:layout_width="241dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Pueden suceder en forma inesperada, y tienen que tener una conexión causal con el hecho imprevisto que lo motiva por ejemplo accidentes hogareños, tránsito o laborales.\n"
+                android:textSize="16dp"
+                android:layout_below="@id/lblAccidentes">
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+            <TextView
+                android:id="@+id/lblTraumatismo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:text="Traumatismo:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_below="@id/lblAccidentes1"/>
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblTraumatismo1"
+                android:layout_width="241dp"
+                android:layout_height="130dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Se trata de una lesión física generada por un agente externo o de un golpe emocional que genera un perjuicio persistente en el inconsciente. Los esguinces, las fracturas y las luxaciones son ejemplos de traumas.\n"
+                android:textSize="16dp"
+                android:layout_below="@id/lblTraumatismo">
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblClinicos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:text="Clínicos:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_below="@id/lblTraumatismo1"/>
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblClinicos1"
+                android:layout_width="241dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Con referencia al ejercicio de la medicina dedicada a prevenir, diagnosticar y tratar las dolencias, las enfermedades y los trastornos del ser humano.\n"
+                android:textSize="16dp"
+                android:layout_below="@id/lblClinicos">
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

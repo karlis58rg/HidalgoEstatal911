@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.MenuEmergencias.Emergencias911Menu">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:id="@+id/bodyFormEmergenciasMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgEmergencia"
+                android:layout_width="155dp"
+                android:layout_height="138dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/ic_botonemergenciamultimedia_4"
+                android:textSize="20sp"></ImageView>
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblInformarEmergencia"
+                android:layout_width="320dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/imgEmergencia"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Con Emergencia Multimedia te proporcionamos opciones donde eliges el tipo de emergencia que requiere ser atendida.\n"
+                android:textSize="16dp"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <ImageButton
+                android:id="@+id/imgMedica"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:layout_below="@id/lblInformarEmergencia"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/ic_boton_medica_con_texto">
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/imgProCi"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:layout_below="@id/lblInformarEmergencia"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/imgSeguridad"
+                android:background="@drawable/ic_boton_proteccion_civil_con_texto"></ImageButton>
+
+            <ImageButton
+                android:id="@+id/imgSeguridad"
+                android:layout_width="100dp"
+                android:layout_height="132dp"
+                android:layout_below="@id/lblInformarEmergencia"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/imgMedica"
+                android:background="@drawable/ic_boton_seguridad_publica_con_texto"></ImageButton>
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblInformarEmergenciaDesglose2"
+                android:layout_width="320dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/imgSeguridad"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="Además podrás enviar al instante tu ubicación, vía GPS, además de enviar archivos de video, audio y fotografías para reforzar el reporte y facilitar la atención."
+                android:textSize="16dp"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

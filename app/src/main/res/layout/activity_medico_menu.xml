@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MedicoMenu">
+
+    <ImageView
+        android:id="@+id/imgHeaderCyHReporte"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_barracasayh_911" />
+
+    <ImageButton
+        android:id="@+id/btnHomeMedico"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_btncasa_911" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:id="@+id/bodyFormEmergencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/imgMedica"
+                android:layout_width="100dp"
+                android:layout_height="95dp"
+                android:background="@drawable/ic_btnmedicas_911"
+                android:layout_centerHorizontal="true">
+            </ImageButton>
+
+            <TextView
+                android:id="@+id/medic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgMedica"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:text="Emergencia Médica"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblMedico"
+                android:layout_width="wrap_content"
+                android:layout_height="190dp"
+                android:layout_below="@id/imgMedica"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:text="Es el conjunto de servicios que se proporcionan a una persona, con el fin de proteger, promover y restaurar su salud; la cual podrá apoyarse de medios electrónicos de acuerdo con las normas oficiales mexicanas que al efecto expida la Secretaría de Salud (DOF, Ley General de Salud, 2015).\nSe representan como:\n"
+                android:textSize="16dp"></me.biubiubiu.justifytext.library.JustifyTextView>
+            <TextView
+                android:id="@+id/lblAccidentes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:text="Accidentes:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_below="@id/lblMedico"/>
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblAccidentes1"
+                android:layout_width="wrap_content"
+                android:layout_height="84dp"
+                android:layout_below="@id/lblAccidentes"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:text="Suceso fortuito del que resulta una lesión reconocible (Organización Mundial de la Salud, 1957).\n"
+                android:textSize="16sp"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblTraumatismo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblAccidentes1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:text="Transtorno psicológico:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblTraumatismo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblTraumatismo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:text="Perturbación de la actividad intelectual, el estado de ánimo o el comportamiento que no se ajusta a las creencias y las normas culturales. En la mayoría de los casos, los síntomas van acompañados de angustia e interferencia con las funciones personales. Entre sus síntomas se encuentran: Dolores, trastornos de sueño, tristeza, miedo, ansiedad, dificultad para pensar con claridad, creencias anormales, conducta agresiva, percepción visual o auditiva de cosas que otras personas no ven u oyen (Organización Mundial de la Salud, 2010).\n"
+                android:textSize="16sp"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblClinicos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblTraumatismo1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:text="Asistencia:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblClinicos1"
+                android:layout_width="292dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/lblClinicos"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Atención centrada en los individuos enfermos, que no solo consiste en la aplicación de medidas para restablecer la salud, sino también en la adopción de disposiciones encaminadas a la prevención y el descubrimiento de dolencias asintomáticas (Organización Mundial de la Salud, 1959).\n"
+                android:textSize="16dp"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

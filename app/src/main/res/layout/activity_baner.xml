@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Baner">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/baner"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:fillColor="@color/mapa"
+        app:pageColor="@color/backgroundMenu911"
+        app:autoPlay="false"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="1dp">
+    </com.synnapps.carouselview.CarouselView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="286dp"
+            android:layout_marginLeft="286dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="0dp"
+            android:text="Aceptar" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

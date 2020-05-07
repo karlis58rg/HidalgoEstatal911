@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".FormFotoUser">
+
+    <ImageView
+        android:id="@+id/lblRegistrate"
+        android:layout_width="320dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_registrate_" />
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="105dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="105dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#FF000000"/>
+
+    <Button
+        android:id="@+id/pickFoto"
+        android:layout_width="105dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/ic_cam_911"
+        android:layout_centerHorizontal="true"/>
+
+    <me.biubiubiu.justifytext.library.JustifyTextView
+        android:id="@+id/lblintroducirfoto"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="160dp"
+        android:textSize="12dp"
+        android:text="Tu fotografía actualizada será utilizada únicamente para corroborar la identidad del informante, su manejo es estrictamente confidencial.\n"/>
+
+
+    <ScrollView
+        android:id="@+id/scroolFotoUser"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="230dp">
+
+        <RelativeLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtTelefonoUser"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/telefono_911"
+                android:background="@color/textToll"
+                android:ems="10"
+                android:textColor="@color/txtColor"
+                android:inputType="phone"
+                android:hint="Telefono"
+                android:maxLength="10"
+                android:layout_marginBottom="10dp"
+                android:digits="0123456789"/>
+
+            <EditText
+                android:id="@+id/txtNombres"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/txtTelefonoUser"
+                android:background="@color/textToll"
+                android:drawableLeft="@drawable/icono_user"
+                android:ems="10"
+                android:hint="Nombre(s)"
+                android:inputType="textCapCharacters"
+                android:maxLength="20"
+                android:textAllCaps="true"
+                android:textColor="@color/txtColor" />
+
+            <EditText
+                android:id="@+id/txtApaterno"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/textToll"
+                android:drawableLeft="@drawable/icono_user"
+                android:layout_below="@+id/txtNombres"
+                android:ems="10"
+                android:textColor="@color/txtColor"
+                android:hint="A. Paterno"
+                android:inputType="textCapCharacters"
+                android:textAllCaps="true"
+                android:maxLength="20"/>
+
+            <EditText
+                android:id="@+id/txtAmaterno"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/icono_user"
+                android:background="@color/textToll"
+                android:layout_below="@+id/txtApaterno"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:textAllCaps="true"
+                android:textColor="@color/txtColor"
+                android:hint="A. Materno"
+                android:maxLength="20"/>
+
+
+            <TextView
+                android:id="@+id/lblSexo"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/txtAmaterno"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:text="Género:"
+                android:textSize="20dp"
+                android:layout_marginLeft="50dp"/>
+
+
+
+    <RadioGroup
+        android:id="@+id/radioSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtAmaterno"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/lblSexo"
+        android:layout_toRightOf="@+id/lblSexo"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radioFemenino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="F"/>
+
+        <RadioButton
+            android:id="@+id/radioMasculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNombres"
+            android:layout_marginLeft="25dp"
+            android:text="M"/>
+
+    </RadioGroup>
+            <EditText
+                android:id="@+id/txtMail"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/txtAmaterno"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/textToll"
+                android:drawableLeft="@drawable/mail"
+                android:hint="ejemplo@gmail.com"
+                android:inputType="textEmailAddress"
+                android:textSize="17dp" />
+
+
+            <TextView
+                android:id="@+id/lblAlergias"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/txtMail"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:text="Alergias:"
+                android:textSize="20dp"
+                android:layout_marginLeft="50dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioAlergias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtMail"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/lblAlergias"
+                android:layout_toRightOf="@+id/lblAlergias"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioAlergiasSi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtNombres"
+                    android:layout_marginLeft="20dp"
+                    android:text="Sí" />
+
+                <RadioButton
+                    android:id="@+id/radioAlergiasNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtMail"
+                    android:layout_marginLeft="20dp"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/txtComentariosAlergias"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/radioAlergias"
+                android:background="@color/textToll"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Especifica"
+                android:inputType="textMultiLine"
+                android:textColor="@color/txtColor" />
+
+            <TextView
+                android:id="@+id/lblMedicamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtComentariosAlergias"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="50dp"
+                android:text="Medicamentos:"
+                android:textSize="18dp" />
+
+
+            <RadioGroup
+                android:id="@+id/radioMedicamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtComentariosAlergias"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/lblAlergias"
+                android:layout_toRightOf="@+id/lblAlergias"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioMedicamentoSi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtNombres"
+                    android:layout_marginLeft="20dp"
+                    android:text="Sí" />
+
+                    <RadioButton
+                        android:id="@+id/radioMedicamentoNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtMail"
+                        android:layout_marginLeft="20dp"
+                        android:text="No" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/txtComentariosMedicamento"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/radioMedicamento"
+                android:background="@color/textToll"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Especifica"
+                android:inputType="textMultiLine"
+                android:textColor="@color/txtColor" />
+
+            <TextView
+                android:id="@+id/lblFamiliar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtComentariosMedicamento"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="50dp"
+                android:text="En caso de emergencia, notificar a:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txtNombresFamiliar"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/textToll"
+                android:drawableLeft="@drawable/icono_user"
+                android:ems="10"
+                android:layout_below="@+id/lblFamiliar"
+                android:hint="Nombre completo"
+                android:inputType="textCapCharacters"
+                android:maxLength="20"
+                android:textAllCaps="true"
+                android:textColor="@color/txtColor" />
+
+            <EditText
+                android:id="@+id/txtTelefonoFamiliar"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/txtNombresFamiliar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/telefono_911"
+                android:background="@color/textToll"
+                android:ems="10"
+                android:textColor="@color/txtColor"
+                android:inputType="phone"
+                android:hint="Telefono"
+                android:maxLength="10"
+                android:digits="0123456789"/>
+
+            <Button
+                android:id="@+id/btnEnviarRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTelefonoFamiliar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="110dp"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="110dp"
+                android:layout_marginRight="110dp"
+                android:background="@drawable/boton_redondo"
+                android:text="Enviar"
+                android:textColor="@color/textToll"/>
+
+
+            <Button
+                android:id="@+id/btnAvisoPrivacidad"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_below="@id/btnEnviarRegistro"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="-1dp"
+                android:layout_marginLeft="-1dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/ic_consulta_aviso_de_privacidad"
+                android:textSize="10dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

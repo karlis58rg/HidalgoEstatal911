@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_menu"
+    app:startDestination="@id/emergenciasMenu">
+
+    <fragment
+        android:id="@+id/emergenciasMenu"
+        android:name="mx.gob.hidalgo.hidalgoestatal911.ui.Menu.EmergenciasMenu"
+        android:label="Menú"
+        tools:layout="@layout/emergencias_menu_fragment" />
+    <fragment
+        android:id="@+id/emergencias911Menu"
+        android:name="mx.gob.hidalgo.hidalgoestatal911.ui.MenuEmergencias.Emergencias911Menu"
+        android:label="Emergencia Multimedia"
+        tools:layout="@layout/emergencias911_menu_fragment" />
+    <fragment
+        android:id="@+id/transporteMenu"
+        android:name="mx.gob.hidalgo.hidalgoestatal911.ui.MenuTransporte.TransporteMenu"
+        android:label="Destino Seguro"
+        tools:layout="@layout/transporte_menu_fragment" />
+    <fragment
+        android:id="@+id/llamadaMenu"
+        android:name="mx.gob.hidalgo.hidalgoestatal911.ui.MenuLlamada.LlamadaMenu"
+        android:label="Llamada al 911"
+        tools:layout="@layout/llamada_menu_fragment" />
+</navigation>

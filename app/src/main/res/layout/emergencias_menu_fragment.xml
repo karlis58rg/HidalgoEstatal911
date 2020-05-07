@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:id="@+id/bodyFormEmergencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EAEAEA"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnEmergencias"
+                android:layout_width="wrap_content"
+                android:layout_height="190dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/ic_botonrojobarra_2" />
+
+            <ImageButton
+                android:id="@+id/btnTransporteSeguro"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_below="@+id/btnEmergencias"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+
+                android:layout_marginStart="-2dp"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/ic_botonemergenciamultimediabarra_5" />
+
+            <ImageButton
+                android:id="@+id/btn911"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_below="@+id/btnTransporteSeguro"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="-2dp"
+                android:layout_marginRight="-2dp"
+                android:background="@drawable/ic_botondestinosegurobarrablanca_6"
+                android:scaleType="fitXY" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

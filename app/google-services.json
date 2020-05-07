@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "931919942699",
+    "firebase_url": "https://hidalgoestatal911.firebaseio.com",
+    "project_id": "hidalgoestatal911",
+    "storage_bucket": "hidalgoestatal911.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931919942699:android:803e8c1d7f96cbff70c66e",
+        "android_client_info": {
+          "package_name": "mx.gob.hidalgo.hidalgoestatal911"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931919942699-b65silbdlpfdqhsqsjrps5q0de4glr94.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.gob.hidalgo.hidalgoestatal911",
+            "certificate_hash": "09a975db5393517222d8591817a478b6225897c2"
+          }
+        },
+        {
+          "client_id": "931919942699-rretp37quft1f04lakcpm9iks6f9p7tu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.gob.hidalgo.hidalgoestatal911",
+            "certificate_hash": "fcd3592979f8b3fe8163bebe75e7251d0b77850a"
+          }
+        },
+        {
+          "client_id": "931919942699-3fhqglh6mjekv63frec88lf2r4fn94k0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.gob.hidalgo.hidalgoestatal911",
+            "certificate_hash": "774d63689f90a9f289519de111745c630dc0902c"
+          }
+        },
+        {
+          "client_id": "931919942699-2dsehm9ulqmplrn0qitd605g4krlem06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAustqQlOuNfQUApE5pE1j9vmlkLO7ZvYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "931919942699-2dsehm9ulqmplrn0qitd605g4krlem06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

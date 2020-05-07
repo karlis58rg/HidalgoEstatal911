@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".FormServicios">
+
+    <ImageView
+        android:id="@+id/imgHeaderCyH"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_barracasayh_911" />
+
+    <ImageButton
+        android:id="@+id/imgHome"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_btncasa_911" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imgHeaderCyH">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblTipoEmergencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Cuál es tu emergencia?"
+                android:textSize="25sp"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageButton
+                android:id="@+id/btnEmergenciaMedica"
+                android:layout_below="@id/lblTipoEmergencia"
+                android:layout_width="match_parent"
+                android:layout_height="179dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_medicaconbarra"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/btnEmergenciaSeguridad"
+                android:layout_below="@id/btnEmergenciaMedica"
+                android:layout_width="match_parent"
+                android:layout_height="179dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_seguridadconbarra"
+                android:scaleType="fitXY" />
+
+            <ImageButton
+                android:id="@+id/btnEmergenciaProCivil"
+                android:layout_below="@id/btnEmergenciaSeguridad"
+                android:layout_width="match_parent"
+                android:layout_height="179dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_proteccionconbarra"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageButton
+                android:id="@+id/btnEmergenciaServPublicos"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/btnEmergenciaSeguridad"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/textToll"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_boton_servicios_publicos_azul" />
+
+            <TextView
+                android:id="@+id/lblEmergenciaServPublicos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnEmergenciaSeguridad"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_toEndOf="@+id/btnEmergenciaMedica"
+                android:layout_toRightOf="@+id/btnEmergenciaMedica"
+                android:text="Servicios Públicos"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

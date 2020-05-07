@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mx.gob.hidalgo.hidalgoestatal911">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Vistas.FrmRegistroUser"></activity>
+        <activity android:name=".Llamada" />
+        <activity
+            android:name=".ProteccionMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SeguridadMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MedicoMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormReporteEnviado"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormServicios"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormAuthFirebase"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormSensorIngresaPlaca"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".Servicio911.ServiceShake"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".MensajeSalidaUser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MensajeSalida"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormFotoUser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuEmergencias"
+            android:screenOrientation="portrait" />
+        <!--
+        <service
+            android:name=".Servicio911.MyServicio"
+            android:enabled="true"
+            android:exported="true" />
+        -->
+        <activity
+            android:name=".FormPlaca"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormPlacaQr"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormTipoEmergencias"
+            android:label="@string/title_activity_form_tipo_emergencias"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FormTransportePublico"
+            android:screenOrientation="portrait" />
+        <activity android:name=".FormIngresaPlaca" />
+        <activity
+            android:name=".FormNotificacionEmergencia"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormAutenticacion"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormEmergencias"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Baner" />
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+        <service android:name=".Shake.ShakeService">
+        </service>
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCt3XQtLs8UQyGEuMrgq0e49-51lAjYa3Y" />
+    </application>
+
+</manifest>

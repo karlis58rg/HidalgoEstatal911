@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/textToll"
+    tools:context=".FormPlacaQr">
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:id="@+id/bodyFormEmergencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblManualQR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:text="Agita tu celular para activar"/>
+
+            <ImageButton
+                android:id="@+id/btnQRScan"
+                android:layout_width="wrap_content"
+                android:layout_height="135dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="120dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="120dp"
+                android:layout_marginRight="120dp"
+                android:background="@color/textToll"
+                app:srcCompat="@drawable/qr"
+                android:layout_below="@id/gifManoQR"/>
+            <TextView
+                android:id="@+id/lblPressQR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRESIONA PARA ESCANEAR PLACA"
+                android:layout_below="@id/btnQRScan"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/lblPlacaQR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnQRScan"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+<!--            <Button
+                android:id="@+id/btnSendPlacaWS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ENVIAR EMERGENCIA"
+                android:layout_below="@id/lblPlacaQR"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/boton_redondo"
+                android:textColor="@color/textToll"/>-->
+
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lbl911PlacaQR"
+                android:layout_width="241dp"
+                android:layout_height="130dp"
+                android:layout_below="@id/btnEndServiceQR"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Si necesitas ayuda en caso de emergencia
+Con esta función, si te encuentras en peligro sin necesidad de abrir la app, agita fuertemente tu dispositivo e inmediatamente los Servicios de Emergencia del 911 del Estado de Hidalgo recibirán tu alerta.\n">
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:id="@+id/gifManoQR"
+                            android:src="@drawable/mano_animada"
+                            android:layout_width="200dp"
+                            android:layout_height="180dp"
+                            android:layout_below="@id/lblManualQR"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginLeft="90dp"
+                            android:layout_marginEnd="90dp"
+                            android:layout_marginRight="90dp"/>
+
+            <TextView
+                android:id="@+id/lblCoordenadas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="15dp"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/lblUbicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblCoordenadas"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="15dp"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/lblRandom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblUbicacion"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="15dp"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/lblHoraFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblRandom"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="15dp"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/tvShakeService"
+                android:layout_width="178dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="102dp"
+                android:visibility="gone"
+                />
+
+            <Button
+                android:id="@+id/btnEndServiceQR"
+                android:layout_width="150dp"
+                android:layout_height="38dp"
+                android:layout_below="@id/lblPlacaQR"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/boton_redondo"
+                android:text="Detener Servicio"
+                android:textColor="@color/textToll"
+                android:layout_centerInParent="true"/>
+
+
+            <!--    <TextView
+                    android:id="@+id/lblDireccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/gifMano"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:background="#E3F6CE"/>-->
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

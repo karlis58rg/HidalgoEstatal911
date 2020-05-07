@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".SeguridadMenu">
+
+    <ImageView
+        android:id="@+id/imgHeaderCyHReporte"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_barracasayh_911" />
+
+    <ImageButton
+        android:id="@+id/btnHomeSeguridad"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_btncasa_911" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:id="@+id/bodyFormEmergencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageButton
+                android:id="@+id/imgServi"
+                android:layout_width="100dp"
+                android:layout_height="95dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_btnseguridad_911"></ImageButton>
+
+            <TextView
+                android:id="@+id/segu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgServi"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:text="Emergencia de Seguridad"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblSeguridad"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:layout_below="@id/imgServi"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:text="Función a cargo de la federación, la Ciudad de México, los estados y los municipios, que comprende la prevención de los delitos, la investigación y persecución para hacerla efectiva; así como la sanción de las infracciones administrativas, en los términos de la ley. La actuación de las instituciones de seguridad pública se regirá por los principios de legalidad, objetividad, eficiencia, profesionalismo, honradez y respeto a los derechos humanos (Cámara de Diputados, 2015).\nSe representan como:\n"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblAbandono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblSeguridad"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Abandono:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblAbandono1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblAbandono"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:text="Referencia al acto de dejar de lado o descuidar cualquier elemento con el fin de daño.\n"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblArmas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblAbandono1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Actos ilícitos con armas:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblArmas1"
+                android:layout_width="241dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/lblArmas"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Acciones relacionadas con armas de fuego o explosivos, y para las que no se cuenta con la debida autorización para ello, o bien, porque, por su naturaleza, no eran susceptibles de ser autorizados por la autoridad."></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblComunicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblArmas1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Atentados contra las vías de comunicación:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblComunicacion1"
+                android:layout_width="241dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/lblComunicacion"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Actos que afectan y alteran los medios de comunicación y transportación, provocando que esta no pueda realizarse de forma correcta, con lo cual se afecta y pone en peligro a los usuarios (INEGI, 2012).\n"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblPatrimonio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblComunicacion1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Atentados contra el patrimonio:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblPatrimonio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblPatrimonio"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:text="Integra las acciones en las que la persona ha sufrido un decremento en sus bienes, derechos u obligaciones, con o sin beneficio para el responsable y de forma no violenta.\n"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblFamilia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblPatrimonio1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Atentados contra la familia:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblFamilia1"
+                android:layout_width="wrap_content"
+                android:layout_height="113dp"
+                android:layout_below="@id/lblFamilia"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:text="Hechos que afectan los principios fundamentals que sostienen la institución familiar y sus integrantes: la subsistencia, la ayuda mutual y la fidelidad que deben guardarse sus miembros, así como la seguridad y derechos derivados del estado civil (INEGI, 2012).\n"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblLibertad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblFamilia1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Atentados contra la libertad personal:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblLibertad1"
+                android:layout_width="241dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/lblLibertad"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Acciones cuya ejecución trae como consecuencia la retención o impedimento del ejercicio de la libertad de movimiento y decisión de destino de una persona (INEGI, 2012).\n"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblSexual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblLibertad1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Atentados contra la libertad y seguridad sexual:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblSexual1"
+                android:layout_width="wrap_content"
+                android:layout_height="145dp"
+                android:layout_below="@id/lblSexual"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:text="Conductas que traen como consecuencia la privación de los derechos de libre ejercicio de la sexualidad de la víctima, el estado de certeza de decidir sobre las circunstancias del ejercicio de su sexualidad, así como su normal entendimiento y comprensión de su sexualidad, de acuerdo con sus condiciones particulares.\n"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblColectiva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblSexual1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Atentados contra la sociedad:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblColectiva1"
+                android:layout_width="wrap_content"
+                android:layout_height="69dp"
+                android:layout_below="@id/lblColectiva"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:text="Son las conductas típicas, antijurídicas y culpables en las que se afecta el entorno social (INEGI, 2012).\n"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblPersonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblColectiva1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Atentados contra la vida y la integridad personal:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblPersonal1"
+                android:layout_width="241dp"
+                android:layout_height="55dp"
+                android:layout_below="@id/lblPersonal"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Hechos o acciones que privan o ponen en peligro la vida de un ser humano (INEGI, 2012).\n"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblJuridicos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblPersonal1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Atentados contra otros bienes jurídicos afectados: "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblJuridico1"
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:layout_below="@id/lblJuridicos"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Acciones en contra de la vida de las personas, su patrimonio, libertad física, seguridad pública, economía pública, seguridad del Estado y la adecuada prestación del servicio público."></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblOrden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblJuridico1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Disturbios y alteración del orden público: "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblOrden1"
+                android:layout_width="wrap_content"
+                android:layout_height="69dp"
+                android:layout_below="@id/lblOrden"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginRight="49dp"
+                android:layout_marginBottom="50dp"
+                android:text="Actos que atentan contra la paz pública, con riesgo de causar daños en las personas o propiedades (INEGI, 2012).\n"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblComercio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblOrden1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Comercialización ilegal:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblComercio1"
+                android:layout_width="296dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblComercio"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp"
+                android:text="Comercialización sin los permisos establecidos por la ley.\n"
+                android:textSize="14sp"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblHallazgo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblComercio1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Notificación de Hallazgo:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblHallazgo1"
+                android:layout_width="wrap_content"
+                android:layout_height="77dp"
+                android:layout_below="@id/lblHallazgo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp"
+                android:text="Acto de notificar el encuentro de un objeto o artilugio que puede ser o derivar en una emergencia.\n"
+                android:textSize="14sp"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblParticulares"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblHallazgo1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Por incumplimiento u oposición de particulares"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblParticulares1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblParticulares"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp"
+                android:text="Acto en los que al verse obligado al cumplimiento de un mandato ordenado por la ley, no se realiza, o bien, al haber sido decretado su cumplimiento a través de la fuerza pública se opuso por medios ilegales, enfrentando la autoridad del Estado (INEGI, 2012).\n"
+                android:textSize="14sp"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+            <TextView
+                android:id="@+id/lblEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblParticulares1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Presión contra el estado:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblEstado1"
+                android:layout_width="307dp"
+                android:layout_height="156dp"
+                android:layout_below="@id/lblEstado"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp"
+                android:text="Delitos en los que se realizan acciones con las que se perturba el orden y la paz social, con la finalidad de obtener un beneficio por parte del Estado (INEGI, Clasificación estadística de delitos 2012, 2012).\n"
+                android:textSize="14sp"></me.biubiubiu.justifytext.library.JustifyTextView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

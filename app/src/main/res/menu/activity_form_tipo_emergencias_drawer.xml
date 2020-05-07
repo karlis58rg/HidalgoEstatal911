@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/menu_menu"
+            android:title="Menú" />
+        <item
+            android:id="@+id/medico"
+            android:icon="@drawable/medico_menu"
+            android:title="Medico" />
+        <item
+            android:id="@+id/proteccion"
+            android:icon="@drawable/pro_civil_menu"
+            android:title="Protección Civil" />
+        <item
+            android:id="@+id/seguridad"
+            android:icon="@drawable/seguridad_menu"
+            android:title="Seguridad" />
+        <item
+            android:id="@+id/servPublicos"
+            android:icon="@drawable/ser_publi_menu"
+            android:title="Servícios Públicos"/>
+
+    </group>
+
+    <item android:title="9-1-1">
+        <menu>
+            <item
+                android:id="@+id/acerca"
+                android:icon="@drawable/menu_menu"
+                android:title="Acerca de" />
+            <item
+                android:id="@+id/ayuda"
+                android:icon="@drawable/ayuda_menu"
+                android:title="Ayuda" />
+
+        </menu>
+    </item>
+
+</menu>

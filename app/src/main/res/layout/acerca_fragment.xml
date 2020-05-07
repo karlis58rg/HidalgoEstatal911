@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textToll"
+    tools:context=".ui.Acerca.Acerca">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:id="@+id/bodyFormEmergencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/lblAcercaDe"
+                android:layout_width="241dp"
+                android:layout_height="390dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="\n2019 Gobierno Del Estado De Hidalgo.\n
+        \nDerechos Reservados Secretaria De Seguridad Pública Del Estado De Hidalgo
+        \n
+        \nCentro De Control, Comando, Comunicaciones, Cómputo, Coordinación E Inteligencia
+        \n
+        \nDirección De Tecnologías De Información
+        \n
+        \nV 1.1.0\n">
+            </TextView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

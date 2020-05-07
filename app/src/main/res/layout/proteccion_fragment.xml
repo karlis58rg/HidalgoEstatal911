@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textToll"
+    tools:context=".ui.Proteccion.Proteccion">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:id="@+id/bodyFormEmergencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblProCivil"
+                android:layout_width="241dp"
+                android:layout_height="410dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Una emergencia de protección civil está dedicada a velar por el bienestar inmediato de la ciudadanía, principalmente aquella que se ha visto amenazada por una catástrofe o accidente relacionado con esto, así como la salvaguarda de los bienes del conglomerado y del medio ambiente.
+        \nDebemos tomar en cuenta para protegernos de cualquier tipo de riesgo que se presente en un estado tan grande como el nuestro, en nuestra casa, colonia, escuela o trabajo, de modo que son disposiciones y acciones que las autoridades y la población realizan para identificar riesgos, prevenir, saber enfrentarlos cuando se presenten y recuperarse de sus consecuencias en caso de emergencia o desastre, procurando la seguridad y salvaguarda de las personas, sus propiedades y el medio ambiente.
+        \n
+        \nSe puede presentar en.\n">
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+            <TextView
+                android:id="@+id/lblAuxilio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Auxilio:"
+                android:textSize="20sp"
+                android:layout_below="@id/lblProCivil"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblAuxilio1"
+                android:layout_width="241dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_below="@id/lblAuxilio"
+                android:text="Son las actividades de ayuda a la población afectada por la presencia de una emergencia o desastre y deben ser oportunas y suficientes. Requieren contar con planes de emergencia, protocolos y conocer medidas de autoprotección ante distintos escenarios.\n.">
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+            <TextView
+                android:id="@+id/lblMedioAmbiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Medio Ambiente:"
+                android:textSize="20sp"
+                android:layout_below="@id/lblAuxilio1"
+                android:textStyle="bold" />
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblMedioAmbiente1"
+                android:layout_width="241dp"
+                android:layout_height="85dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_below="@id/lblMedioAmbiente"
+                android:text="Son siniestros o desastres son causados por diferentes fenómenos, que, de acuerdo con su origen, los podemos clasificar en naturales y antrópicos, estos últimos, provocados por la actividad humana.\n.">
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+            <TextView
+                android:id="@+id/lblRescate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Rescate"
+                android:textSize="20sp"
+                android:layout_below="@id/lblMedioAmbiente1"
+                android:textStyle="bold" />
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblRescate1"
+                android:layout_width="241dp"
+                android:layout_height="85dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_below="@id/lblRescate"
+                android:text="Son las acciones que se realizan para restablecer los servicios y las actividades que se hayan visto afectados por la presencia de una emergencia o desastre, hasta retornar a la normalidad.\n.">
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+            <TextView
+                android:id="@+id/lblIncendio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Incendio"
+                android:textSize="20sp"
+                android:layout_below="@id/lblRescate1"
+                android:textStyle="bold" />
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/lblIncendio1"
+                android:layout_width="241dp"
+                android:layout_height="280dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp"
+                android:layout_below="@id/lblIncendio"
+                android:text="Es un fuego de grandes proporciones que está fuera de control, que puede originarse de manera súbita o gradual; provoca serios daños materiales, interrumpe servicios y afectan el ambiente, y en ocasiones causan la muerte de muchas personas. Las causas más comunes son los cortocircuitos, flamazos por fugas de gas, dejar velas o veladoras encendidas, olvidar alimentos sobre la estufa encendida y por almacenar combustibles cerca de fuentes de calor o de aparatos eléctricos. En menor medida, por arrojar colillas de cigarro a botes de basura, fogatas y el uso de cohetes.\n">
+            </me.biubiubiu.justifytext.library.JustifyTextView>
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
