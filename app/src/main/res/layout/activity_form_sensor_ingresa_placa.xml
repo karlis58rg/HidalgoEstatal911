@@ -266,7 +266,8 @@
                 android:id="@+id/lblCoordenadasSensorPlaca"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Coordenadas" />
+                android:text="Coordenadas"
+                android:visibility="gone"/>
 
         </RelativeLayout>
     </ScrollView>

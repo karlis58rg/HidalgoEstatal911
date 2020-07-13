@@ -258,6 +258,39 @@ public class ServiceShake extends Service implements SensorEventListener {
         mAccel = mAccel * 0.9f + delta; // perform low-cut filter
 
         switch (version){
+            case "21":
+                Log.i("HERE",version);
+                if (mAccel > 7) {
+                    tiempoAnterior = tiempoActual;
+                    tiempoActual = System.currentTimeMillis();
+                    diferencia=tiempoActual-tiempoAnterior;
+                    if(diferencia < 700){
+                        sacudidas++;
+                    }
+                    else{
+                        sacudidas=0;
+                    }
+                    if(sacudidas == 2 ) {
+                        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                        v.vibrate(1500);
+                        sacudidas=0;
+                        FormSensorIngresaPlaca.gifRojo.setVisibility(View.VISIBLE);
+                        FormSensorIngresaPlaca.bandaroja.setVisibility( View.VISIBLE );
+                        FormSensorIngresaPlaca.lblagita.setVisibility(View.INVISIBLE);
+                        FormSensorIngresaPlaca.emergencia.setVisibility(View.INVISIBLE);
+                        FormSensorIngresaPlaca.paloma.setVisibility(View.INVISIBLE);
+                        this.locationStart();
+                        if(bandera == 2){
+                            insertBdEventoTransportePublicoRobosIOS();
+                        }else{
+                            Random();
+                            insertBdEventoTransportePublicoIOS();
+                            Toast.makeText(getApplicationContext(), "EMERGENCIA ENVIADA", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+                break;
+
             case "22":
                 Log.i("HERE",version);
                 if (mAccel > 12) {
@@ -357,7 +390,7 @@ public class ServiceShake extends Service implements SensorEventListener {
                 break;
             case "25":
                 Log.i("HERE",version);
-                if (mAccel > 10) {
+                if (mAccel > 10.5) {
                     tiempoAnterior = tiempoActual;
                     tiempoActual = System.currentTimeMillis();
                     diferencia=tiempoActual-tiempoAnterior;
@@ -387,6 +420,71 @@ public class ServiceShake extends Service implements SensorEventListener {
                     }
                 }
                 break;
+            case "26":
+                Log.i("HERE",version);
+                if (mAccel > 11.0) {
+                    tiempoAnterior = tiempoActual;
+                    tiempoActual = System.currentTimeMillis();
+                    diferencia=tiempoActual-tiempoAnterior;
+                    if(diferencia < 700){
+                        sacudidas++;
+                    }
+                    else{
+                        sacudidas=0;
+                    }
+                    if(sacudidas == 2 ) {
+                        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                        v.vibrate(1500);
+                        sacudidas=0;
+                        FormSensorIngresaPlaca.gifRojo.setVisibility(View.VISIBLE);
+                        FormSensorIngresaPlaca.bandaroja.setVisibility( View.VISIBLE );
+                        FormSensorIngresaPlaca.lblagita.setVisibility(View.INVISIBLE);
+                        FormSensorIngresaPlaca.emergencia.setVisibility(View.INVISIBLE);
+                        FormSensorIngresaPlaca.paloma.setVisibility(View.INVISIBLE);
+                        this.locationStart();
+                        if(bandera == 2){
+                            insertBdEventoTransportePublicoRobosIOS();
+                        }else{
+                            Random();
+                            insertBdEventoTransportePublicoIOS();
+                            Toast.makeText(getApplicationContext(), "EMERGENCIA ENVIADA", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+                break;
+            case "27":
+                Log.i("HERE",version);
+                if (mAccel > 11) {
+                    tiempoAnterior = tiempoActual;
+                    tiempoActual = System.currentTimeMillis();
+                    diferencia=tiempoActual-tiempoAnterior;
+                    if(diferencia < 700){
+                        sacudidas++;
+                    }
+                    else{
+                        sacudidas=0;
+                    }
+                    if(sacudidas == 2 ) {
+                        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                        v.vibrate(1500);
+                        sacudidas=0;
+                        FormSensorIngresaPlaca.gifRojo.setVisibility(View.VISIBLE);
+                        FormSensorIngresaPlaca.bandaroja.setVisibility( View.VISIBLE );
+                        FormSensorIngresaPlaca.lblagita.setVisibility(View.INVISIBLE);
+                        FormSensorIngresaPlaca.emergencia.setVisibility(View.INVISIBLE);
+                        FormSensorIngresaPlaca.paloma.setVisibility(View.INVISIBLE);
+                        this.locationStart();
+                        if(bandera == 2){
+                            insertBdEventoTransportePublicoRobosIOS();
+                        }else{
+                            Random();
+                            insertBdEventoTransportePublicoIOS();
+                            Toast.makeText(getApplicationContext(), "EMERGENCIA ENVIADA", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+                break;
+
             case "28":
                 Log.i("HERE",version);
                 if (mAccel > 27) {
