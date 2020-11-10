@@ -22,7 +22,6 @@ import mx.gob.hidalgo.hidalgoestatal911.MenuEmergencias;
 import mx.gob.hidalgo.hidalgoestatal911.ProteccionMenu;
 import mx.gob.hidalgo.hidalgoestatal911.R;
 import mx.gob.hidalgo.hidalgoestatal911.SeguridadMenu;
-import mx.gob.hidalgo.hidalgoestatal911.ui.Medico.Medico;
 
 public class Emergencias911Menu extends Fragment {
 

@@ -30,14 +30,14 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        View root = inflater.inflate(R.layout.emergencias_menu_fragment, container, false);
 
         //******************************* EVENTOS DE LOS BOTONES *****************************************//
 
         medico = root.findViewById(R.id.btnEmergenciaMedica);
         protecCivil = root.findViewById(R.id.btnEmergenciaProCivil);
         seguridad = root.findViewById(R.id.btnEmergenciaSeguridad);
-        serviPublicos = root.findViewById(R.id.btnEmergenciaServPublicos);
+        //serviPublicos = root.findViewById(R.id.btnEmergenciaServPublicos);
 
         medico.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +69,7 @@ public class HomeFragment extends Fragment {
                 //Toast.makeText(getActivity(), "SEGURIDAD", Toast.LENGTH_SHORT).show();
             }
         });
-        serviPublicos.setOnClickListener(new View.OnClickListener() {
+        /*serviPublicos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 idServiPublicos = "60124";
@@ -78,7 +78,7 @@ public class HomeFragment extends Fragment {
                 startActivity(i);
                 //Toast.makeText(getActivity(), "SERVICIOS PUBLICOS", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
 
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override

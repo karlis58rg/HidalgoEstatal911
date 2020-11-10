@@ -7,11 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MensajeSalida extends AppCompatActivity {
     String folio;
-    ImageButton menu;
+    ImageView menu;
     TextView folioSalida;
 
     @Override
@@ -19,7 +20,7 @@ public class MensajeSalida extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_mensaje_salida );
 
-        menu = (ImageButton)findViewById( R.id.btnSalidaRegresar);
+        menu = findViewById( R.id.imgHeaderCyHReporteSalida);
         folioSalida = (TextView)findViewById( R.id.lblFolio );
 
         folio = getIntent().getExtras().getString("valorRandom");

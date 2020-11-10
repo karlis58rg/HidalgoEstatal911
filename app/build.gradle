@@ -7,8 +7,8 @@ android {
         applicationId "mx.gob.hidalgo.hidalgoestatal911"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 13
-        versionName "2.4" //ACTUALIZACIÓN CAMPOS OBLIGATORIOS PARA EL USUARIO
+        versionCode 14
+        versionName "14" //ACTUALIZACIÓN DE DISEÑO DE IMAGENES
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         android.defaultConfig.vectorDrawables.useSupportLibrary = true
     }

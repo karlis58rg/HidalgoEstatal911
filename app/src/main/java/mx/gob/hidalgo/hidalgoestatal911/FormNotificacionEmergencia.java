@@ -32,13 +32,10 @@ public class FormNotificacionEmergencia extends AppCompatActivity implements For
     int acceso = 0;
     static final int REQUEST_VIDEO_CAPTURE = 1;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_notificacion_emergencia);
-
 
         ///validacion de permisos
 
@@ -56,8 +53,6 @@ public class FormNotificacionEmergencia extends AppCompatActivity implements For
             iniciar_fragment();
 
         }
-
-
     }
 
     public void iniciar_fragment(){

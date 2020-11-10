@@ -23,8 +23,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Vistas.FrmRegistroUser"></activity>
-        <activity android:name=".Llamada" />
         <activity
             android:name=".ProteccionMenu"
             android:screenOrientation="portrait" />
@@ -64,38 +62,10 @@
         <activity
             android:name=".MenuEmergencias"
             android:screenOrientation="portrait" />
-        <!--
-        <service
-            android:name=".Servicio911.MyServicio"
-            android:enabled="true"
-            android:exported="true" />
-        -->
-        <activity
-            android:name=".FormPlaca"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".FormPlacaQr"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".FormTipoEmergencias"
-            android:label="@string/title_activity_form_tipo_emergencias"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".FormTransportePublico"
-            android:screenOrientation="portrait" />
-        <activity android:name=".FormIngresaPlaca" />
+
         <activity
             android:name=".FormNotificacionEmergencia"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".FormAutenticacion"
-            android:noHistory="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".FormEmergencias"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Baner" />
         <activity
             android:name=".Splash"
             android:screenOrientation="portrait">
@@ -105,13 +75,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--
-        <service android:name=".Shake.ShakeService">
-        </service>
-        -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCt3XQtLs8UQyGEuMrgq0e49-51lAjYa3Y" />
+            android:value="AIzaSyAplPzsAfy0FfYx-ebxn4TTwFYD4Ns3NwI" />
     </application>
 
 </manifest>

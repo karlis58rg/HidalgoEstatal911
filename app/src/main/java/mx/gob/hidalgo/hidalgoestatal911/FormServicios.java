@@ -10,9 +10,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class FormServicios extends AppCompatActivity {
-    private ImageButton medico,protecCivil,seguridad,serviPublicos,home;
+    ImageView home;
+    private ImageButton medico,protecCivil,seguridad,serviPublicos;
     String idMedico,idProCivil,idSeguridad;
 
     @Override
@@ -20,11 +22,10 @@ public class FormServicios extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_form_servicios );
 
+        home = findViewById(R.id.imgHeaderCyHEmergencia);
         medico = (ImageButton)findViewById(R.id.btnEmergenciaMedica);
         protecCivil = (ImageButton)findViewById(R.id.btnEmergenciaProCivil);
         seguridad = (ImageButton)findViewById(R.id.btnEmergenciaSeguridad);
-        serviPublicos = (ImageButton)findViewById(R.id.btnEmergenciaServPublicos);
-        home = (ImageButton)findViewById( R.id.imgHome );
 
         medico.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,3 +70,6 @@ public class FormServicios extends AppCompatActivity {
 
     }
 }
+
+
+

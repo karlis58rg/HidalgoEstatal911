@@ -1,5 +1,6 @@
 package mx.gob.hidalgo.hidalgoestatal911;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -7,12 +8,15 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.hardware.camera2.CameraManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -45,15 +49,11 @@ import okhttp3.Response;
 
 public class FormFotoUser extends AppCompatActivity {
     Button pickFotoAvatar;
-    ImageView avatarimg;
-
+    ImageView aviso;
     CircleImageView avatar2;
-
-
     static final int REQUEST_IMAGE_CAPTURE = 1;
-
     EditText txtTelefonoUs, txtNombre, txtPaterno, txtMaterno, txtEmail, txtDescAlergias, txtDescMedicamentos, txtNombreFamiliar, txtTelFamiliar;
-    Button btnEnviar,aviso;
+    Button btnEnviar;
     String telefono, nombres, paterno, materno, mail, nombreFamiliar, telefonoFamiliar, cargarInfoTelefono, cadena,fecha,hora;
     SharedPreferences share;
     SharedPreferences.Editor editor;
@@ -66,11 +66,14 @@ public class FormFotoUser extends AppCompatActivity {
     String email;
     String dispositivo = "ANDROID";
     int bandera = 0;
+    int acceso = 0;
+    private static final int CODIGO_SOLICITUD_PERMISO = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_foto_user);
+        solicitarPermisosCamera();
 
         txtTelefonoUs = (EditText) findViewById(R.id.txtTelefonoUser);
         txtNombre = (EditText) findViewById(R.id.txtNombres);
@@ -85,24 +88,30 @@ public class FormFotoUser extends AppCompatActivity {
         txtNombreFamiliar = (EditText) findViewById(R.id.txtNombresFamiliar);
         txtTelFamiliar = (EditText) findViewById(R.id.txtTelefonoFamiliar);
         btnEnviar = (Button) findViewById(R.id.btnEnviarRegistro);
-        aviso = (Button)findViewById(R.id.btnAvisoPrivacidad);
-        solicitarPermisosCamera();
+        aviso = (ImageView) findViewById(R.id.btnAvisoPrivacidad);
         //cargar();
-
-
         txtDescAlergias.setVisibility(View.GONE);
         txtDescMedicamentos.setVisibility(View.GONE);
-
         pickFotoAvatar = (Button) findViewById(R.id.pickFoto);
-        avatarimg = (ImageView) findViewById(R.id.avatar);
         avatar2 = findViewById(R.id.profile_image);
-
 
         pickFotoAvatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bandera = 1;
-                llamarItemAvatar();
+                if(ContextCompat.checkSelfPermission(FormFotoUser.this,Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED){
+                    bandera = 1;
+                    llamarItemAvatar();
+                }else{
+                    AlertDialog.Builder dialogo1 = new AlertDialog.Builder(FormFotoUser.this);
+                    dialogo1.setTitle("IMPORTANTE");
+                    dialogo1.setMessage("SI NO ACEPTA LOS PERMISOS SOLICITADOS, LA APLICACION NO FUNCIONARA CORRECTAMENTE");
+                    dialogo1.setPositiveButton("ENTERADO", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialogo1, int id) {
+                            solicitarPermisosCamera();
+                        }
+                    });
+                    dialogo1.show();
+                }
             }
         });
 
@@ -192,14 +201,6 @@ public class FormFotoUser extends AppCompatActivity {
 
 
     }
-
-  /*  private boolean validateEmailAddress(String emailAddress){
-        String  expression="^[\\w\\-]([\\.\\w])+[\\w]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
-        CharSequence inputStr = emailAddress;
-        Pattern pattern = Pattern.compile(expression,Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(inputStr);
-        return matcher.matches();
-    }*/
 
     private void llamarItemAvatar() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);

@@ -7,16 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class MensajeSalidaUser extends AppCompatActivity {
-    ImageButton salidaUser;
+    ImageView salidaUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_mensaje_salida_user );
 
-        salidaUser = (ImageButton)findViewById( R.id.btnSalidaRegresarUser );
+        salidaUser = findViewById( R.id.imgHeaderCyHReporteSalidaUser );
 
         salidaUser.setOnClickListener( new View.OnClickListener() {
             @Override

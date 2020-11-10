@@ -6,21 +6,15 @@
     android:background="@color/textToll"
     tools:context=".FormNotificacion911">
     <ImageView
-        android:id="@+id/imgHeaderCyH"
-        android:layout_width="wrap_content"
+        android:id="@+id/imgHeaderCyHEmergencias"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
         android:scaleType="fitXY"
         android:background="@drawable/ic_barracasayh_911" />
 
-    <ImageButton
-        android:id="@+id/imgHomeEven"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/ic_btncasa_911" />
-
     <RelativeLayout
         android:id="@+id/relative"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -195,7 +189,7 @@
 
                 <ImageButton
                     android:id="@+id/btnTakeAudio"
-                    android:layout_width="65dp"
+                    android:layout_width="60dp"
                     android:layout_height="79dp"
                     android:layout_below="@id/lblSeleccione"
                     android:layout_marginLeft="60dp"
@@ -209,7 +203,7 @@
 
                 <ImageButton
                     android:id="@+id/btnTakeVideo"
-                    android:layout_width="65dp"
+                    android:layout_width="60dp"
                     android:layout_height="79dp"
                     android:layout_below="@id/lblSeleccione"
                     android:layout_marginTop="3dp"
@@ -222,7 +216,7 @@
 
                 <ImageButton
                     android:id="@+id/btnTakeFoto"
-                    android:layout_width="65dp"
+                    android:layout_width="60dp"
                     android:layout_height="79dp"
                     android:layout_below="@id/lblSeleccione"
                     android:layout_marginLeft="50dp"
@@ -249,16 +243,16 @@
                     android:layout_height="80dp"
                     android:layout_below="@id/timer"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/ic_botondetener_3"
+                    android:background="@drawable/ic_botondetener"
                     android:layout_marginLeft="150dp" />
 
                 <ImageButton
                     android:id="@+id/btnPlayAudio"
-                    android:layout_width="75dp"
+                    android:layout_width="60dp"
                     android:layout_height="80dp"
                     android:layout_below="@id/timer"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/ic_boton_reproducir"
+                    android:background="@drawable/ic_botonreproducir"
                     android:layout_marginLeft="225dp"/>
 
                 <ImageView
@@ -287,8 +281,7 @@
                     android:layout_marginEnd="60dp"
                     android:layout_marginBottom="50dp"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    />
+                    android:layout_alignParentRight="true"/>
 
             </RelativeLayout>
 

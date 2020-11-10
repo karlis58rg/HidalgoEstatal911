@@ -6,15 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class MedicoMenu extends AppCompatActivity {
-    ImageButton menu;
+    ImageView menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_medico_menu );
-        menu = (ImageButton)findViewById( R.id.btnHomeMedico );
+        menu = findViewById( R.id.imgHeaderCyHReporte);
         menu.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {

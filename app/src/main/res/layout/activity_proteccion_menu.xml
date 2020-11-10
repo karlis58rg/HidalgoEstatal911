@@ -8,17 +8,11 @@
     tools:context=".ProteccionMenu">
 
     <ImageView
-        android:id="@+id/imgHeaderCyHReporte"
-        android:layout_width="wrap_content"
+        android:id="@+id/imgHeaderCyHReportePC"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/ic_barracasayh_911" />
-
-    <ImageButton
-        android:id="@+id/btnHomeProteccion"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/ic_btncasa_911" />
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -42,8 +36,8 @@
             android:orientation="vertical">
             <ImageButton
                 android:id="@+id/imgProtec"
-                android:layout_width="100dp"
-                android:layout_height="95dp"
+                android:layout_width="120dp"
+                android:layout_height="115dp"
                 android:background="@drawable/ic_btnprocivil_911"
                 android:layout_centerHorizontal="true">
             </ImageButton>

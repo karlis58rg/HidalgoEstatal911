@@ -51,6 +51,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+
+
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -96,8 +98,8 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
     static final int REQUEST_VIDEO_CAPTURE = 1;
-    private ImageButton principal,photo,video,audio,recordAu,playAu,home;
-    private ImageView imgimagen;
+    private ImageButton principal,photo,video,audio,recordAu,playAu;
+    private ImageView imgimagen,home;
     private String cadena,cadenaVideo,cadenaAudio;
     SharedPreferences shared;
     SharedPreferences.Editor editor;
@@ -148,7 +150,7 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
         incidente = getActivity().getIntent().getExtras().getString("valor");
         cargar();
         Random();
-        home = view.findViewById( R.id.imgHomeEven );
+        home = view.findViewById( R.id.imgHeaderCyHEmergencias);
         scroll= view.findViewById(R.id.scrollMap);
 
         photo = view.findViewById(R.id.btnTakeFoto);
@@ -282,13 +284,15 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
                     Toast.makeText(getActivity(), "UN MOMENTO POR FAVOR, SU SOLICITUD ESTA SIENDO PROCESADA", Toast.LENGTH_SHORT).show();
                     insertBdEventoIOS();
                     insertImagen();
-                    Intent i = new Intent( getActivity(),FormReporteEnviado.class );
+                    Intent i = new Intent( getActivity(),MensajeSalida.class );
+                    i.putExtra("valorRandom",randomCodigoVerifi);
                     startActivity(i);
                 } else if (bandera == 2) {
                     Toast.makeText(getActivity(), "UN MOMENTO POR FAVOR, SU SOLICITUD ESTA SIENDO PROCESADA", Toast.LENGTH_SHORT).show();
                     insertBdEventoIOS();
                     insertVideo();
-                    Intent i = new Intent( getActivity(),FormReporteEnviado.class );
+                    Intent i = new Intent( getActivity(),MensajeSalida.class );
+                    i.putExtra("valorRandom",randomCodigoVerifi);
                     startActivity(i);
                 } else if (bandera == 3) {
                     recordAu.setVisibility(view.GONE);
@@ -299,12 +303,14 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
                     insertBdEventoIOS();
                     insertAudio();
                     resetChronometro();
-                    Intent i = new Intent( getActivity(),FormReporteEnviado.class );
+                    Intent i = new Intent( getActivity(),MensajeSalida.class );
+                    i.putExtra("valorRandom",randomCodigoVerifi);
                     startActivity(i);
                 } else {
                     Toast.makeText(getActivity(), "UN MOMENTO POR FAVOR, SU SOLICITUD ESTA SIENDO PROCESADA", Toast.LENGTH_SHORT).show();
                     insertBdEventoIOS();
-                    Intent i = new Intent( getActivity(),FormReporteEnviado.class );
+                    Intent i = new Intent( getActivity(),MensajeSalida.class );
+                    i.putExtra("valorRandom",randomCodigoVerifi);
                     startActivity(i);
                 }
 
@@ -441,8 +447,7 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
 
         marker = map.addMarker(new MarkerOptions().position(mi_posicion).title("Mi posición!").draggable(true));
 
-        CameraPosition cameraPosition = new CameraPosition.Builder()
-                .target(new LatLng(lat_origen, lon_origen)).zoom(14).bearing(15).build();
+        CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(lat_origen, lon_origen)).zoom(14).bearing(15).build();
 
         map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
@@ -631,7 +636,7 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
         OkHttpClient client = new OkHttpClient();
 
         RequestBody body = new FormBody.Builder()
-                .add("Folio", "C5i2019" + randomCodigoVerifi)
+                .add("Folio", randomCodigoVerifi)
                 .add("Telefono", cargarInfoTelefono)
                 .add("NombreUsuario", cargarInfoNombre)
                 .add("ApaternoUsuario", cargarInfoPaterno)
@@ -942,7 +947,7 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
         Random random = new Random();
         numberRandom = random.nextInt(9000)*99;
         codigoVerifi = String.valueOf(numberRandom);
-        randomCodigoVerifi = codigoVerifi;
+        randomCodigoVerifi = "C5i2020"+codigoVerifi;
     }
     //********************* OBTIENE LAS PREFERENCIAS DEL SISTEMA (VARIABLES DE SESSION) *****************************//
     private void cargar(){

@@ -46,7 +46,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
-import mx.gob.hidalgo.hidalgoestatal911.Servicio911.MyServicio;
 import mx.gob.hidalgo.hidalgoestatal911.Servicio911.ServiceShake;
 import pl.droidsonroids.gif.GifImageView;
 
@@ -62,14 +61,14 @@ public class FormSensorIngresaPlaca extends AppCompatActivity {
     public static  TextView emergencia;
     public static GifImageView gifRojo;
     public static ImageView bandaroja;
-    public static ImageButton paloma;
+    public static ImageView paloma;
     private Activity activity;
     private static final int CODIGO_SOLICITUD_PERMISO = 1;
     private LocationManager locationManager;
     private Context context;
     int acceso = 0;
     AlertDialog alert = null;
-    ImageButton home;
+    ImageView home;
     Boolean bandera ;
     Boolean banderaSire;
     String cargarInfoServicio;
@@ -97,7 +96,7 @@ public class FormSensorIngresaPlaca extends AppCompatActivity {
         versionSDK = android.os.Build.VERSION.SDK_INT;
         Log.i("HEY", String.valueOf( versionSDK ) );
 
-        home = (ImageButton)findViewById( R.id.imgHomeServ );
+
 
         inicia = (Button)findViewById( R.id.btnIniciar );
         detiene = (Button)findViewById( R.id.btnDetener );
@@ -105,7 +104,7 @@ public class FormSensorIngresaPlaca extends AppCompatActivity {
 
         txtPlaca = (EditText)findViewById(R.id.txtIngresaPlacaSensor);
         lblPlaca = (TextView) findViewById(R.id.lblPlacaIngresadaSensor);
-        paloma = (ImageButton)findViewById( R.id.impPaloma);
+        paloma = findViewById( R.id.imgPaloma);
         //manita = (GifImageView) findViewById( R.id.gifMano);
         gifRojo = (GifImageView) findViewById( R.id.gifSirena);
         bandaroja = (ImageView)findViewById( R.id.lblDeten );
@@ -114,6 +113,7 @@ public class FormSensorIngresaPlaca extends AppCompatActivity {
         fin = (TextView)findViewById(R.id.lblFin);
         instrucciones = (TextView)findViewById(R.id.lblInstrucciones);
         coordenadas = (TextView)findViewById(R.id.lblCoordenadasSensorPlaca);
+        home = findViewById(R.id.imgHeaderCyHServ);
 
         paloma.setVisibility( View.GONE );
         gifRojo.setVisibility( View.GONE );
@@ -229,7 +229,7 @@ public class FormSensorIngresaPlaca extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.form_tipo_emergencias, menu);
         return true;
     }
 
@@ -241,9 +241,9 @@ public class FormSensorIngresaPlaca extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //if (id == R.id.action_settings) {
+          //  return true;
+        //}
 
         return super.onOptionsItemSelected(item);
     }

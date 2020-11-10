@@ -5,7 +5,6 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -20,24 +19,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import mx.gob.hidalgo.hidalgoestatal911.FormEmergencias;
-import mx.gob.hidalgo.hidalgoestatal911.FormIngresaPlaca;
-import mx.gob.hidalgo.hidalgoestatal911.FormNotificacionEmergencia;
 import mx.gob.hidalgo.hidalgoestatal911.FormSensorIngresaPlaca;
 import mx.gob.hidalgo.hidalgoestatal911.FormServicios;
-import mx.gob.hidalgo.hidalgoestatal911.FormTipoEmergencias;
-import mx.gob.hidalgo.hidalgoestatal911.Llamada;
 import mx.gob.hidalgo.hidalgoestatal911.R;
 
 public class EmergenciasMenu extends Fragment {
 
 
-    ImageButton btnViewEmergenciasRosa,btnViewTransporteRosa,btnViewLlamadaRosa;
     private static  final int REQUEST_CALL = 1;
-    ImageButton btnViewEmergencias,btnViewTransporte,btnViewLlamada;
+    ImageView btnViewEmergencias,btnViewTransporte,btnViewLlamada;
     SharedPreferences share;
     SharedPreferences.Editor editor;
     String cargarInfoSexo;

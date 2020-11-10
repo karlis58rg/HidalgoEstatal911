@@ -111,7 +111,7 @@
 
             <Button
                 android:id="@+id/btnAvisoPrivacidad"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_below="@id/verifyButton"
                 android:layout_alignParentStart="true"

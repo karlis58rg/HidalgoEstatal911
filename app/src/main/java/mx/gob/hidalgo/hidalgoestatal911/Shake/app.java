@@ -28,7 +28,4 @@ public class app extends Application {
             manager.createNotificationChannel(serviceChannel);
         }
     }
-
-
-
 }

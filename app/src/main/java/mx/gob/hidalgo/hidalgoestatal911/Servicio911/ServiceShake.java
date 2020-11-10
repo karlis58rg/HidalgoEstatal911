@@ -117,7 +117,6 @@ public class ServiceShake extends Service implements SensorEventListener {
         Log.i("HERE", "SERVICIO CREADO");
         miTareaSuper = new MyTask2();
 
-
     }
 
     @Override
@@ -604,14 +603,6 @@ public class ServiceShake extends Service implements SensorEventListener {
                     final String myResponse = response.body().toString();  /********** ME REGRESA LA RESPUESTA DEL WS ****************/
                     insertBdEventoTransportePublicoRobosIOS();
 
-                  /*  MyServicio.this.runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            insertBdEventoTransportePublicoRobosIOS();
-                            Toast.makeText(getApplicationContext(), "REGISTRO ENVIADO CON EXITO", Toast.LENGTH_SHORT).show();
-                        }
-                    });*/
-
                 }
             }
         });
@@ -664,15 +655,6 @@ public class ServiceShake extends Service implements SensorEventListener {
                     final String myResponse = response.body().toString();
                     bandera = 2;/********** ME REGRESA LA RESPUESTA DEL WS ****************/
                     //startTimer();
-/*
-                    MyServicio.this.runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            startTimer();
-                            Toast.makeText(getApplicationContext(), "REGISTRO ENVIADO CON EXITO", Toast.LENGTH_SHORT).show();
-
-                        }
-                    });*/
                 }
             }
         });
@@ -714,24 +696,7 @@ public class ServiceShake extends Service implements SensorEventListener {
                         //miTarea.cancel(true);
                     }
                     Log.i("HERE", resp);
-                /*
-                    MyServicio.this.runOnUiThread(new Runnable() {
-                        public void run() {
-                            if(resp.equals(valor)){
-                                Log.i("HERE", resp);
-                                stopTimer();
-                                insertBdEventoTransportePublicoRobosIOS();
-                            }else{
-                                Log.i("HERE", resp);
-                                Log.i("HERE", "PROCESO TERMINADO");
-                                stopForeground(true);
-                                miTarea.cancel(true);
-                                onDestroy();
-                                stopTimer();
-                            }
-                            Log.i("HERE", resp);
-                        }
-                    });*/
+
                 }
             }
         });
@@ -897,7 +862,6 @@ public class ServiceShake extends Service implements SensorEventListener {
         settings.edit().remove("servicio").commit();
         //Toast.makeText(getApplicationContext(),"Dato Eliminado",Toast.LENGTH_LONG).show();
     }
-
 
     //********************* GENERA EL NÚMERO ALEATORIO PARA EL FOLIO *****************************//
 
