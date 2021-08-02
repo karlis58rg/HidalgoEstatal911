@@ -166,7 +166,6 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
         detenerAudio = view.findViewById(R.id.btnDetener);
         tiempo = view.findViewById(R.id.timer);
 
-
         btnsendEmergencia = view.findViewById(R.id.btnEnviarEmergencia);
 
         rest = view.findViewById(R.id.txtComentNotifiEmergencia);
@@ -466,7 +465,6 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
     }
     //********************************** VIDEO ***********************************//
     //****************************** PARA UTILIZACIÓN DEL VIDEO ***********************************//
-
     private  void llamarItemVideo(){
         Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
         takeVideoIntent.putExtra(MediaStore.EXTRA_DURATION_LIMIT,7);
@@ -474,10 +472,8 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
             startActivityForResult(takeVideoIntent,REQUEST_VIDEO_CAPTURE);
         }
     }
-
     //********************************** VIDEO ***********************************//
     //****************************** PARA UTILIZACIÓN DEL VIDEO ***********************************//
-
     private  void llamarItemAudio(){
         Intent galeryIntent = new Intent(Intent.ACTION_PICK,MediaStore.Audio.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(galeryIntent,1);
@@ -585,13 +581,8 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
 
         }
     }
-
-
-
     //********************************** SE CONVIERTE A BASE64 ***********************************//
-
-    private void imagen()
-    {
+    private void imagen(){
         imgimagen.buildDrawingCache();
         Bitmap bitmap = imgimagen.getDrawingCache();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -693,10 +684,8 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
             }
         });
     }
-
     //********************************** INSERTA IMAGEN AL SERVIDOR ***********************************//
     public void insertImagen() {
-
         OkHttpClient client = new OkHttpClient();
         RequestBody body = new FormBody.Builder()
                 .add("Description",cargarInfoTelefono +".jpg" )
@@ -716,7 +705,6 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
                 Toast.makeText(getContext(), "ERROR AL ENVIAR SU REGISTRO", Toast.LENGTH_LONG).show();
                 Looper.loop();
             }
-
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
@@ -771,7 +759,6 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
             }
         });
     }
-
     //********************************** INSERTA AUDIO AL SERVIDOR ***********************************//
     public void insertAudio() {
 
@@ -811,13 +798,11 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
             }
         });
     }
-
     //********************* INICIA EL CONTADOR **********************************************************************//
     private void resetChronometro() {
         tiempo.setBase(SystemClock.elapsedRealtime());
         detenerse = 0;
     }
-
     private void stopChronometro() {
         if(correr){
             tiempo.stop();
@@ -834,9 +819,7 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
             correr = true;
         }
     }
-
     ////*********************************************GRABAR AUDIO*********************************************//////
-
     public void grabar() {
         if(bandera == 4){
             resetChronometro();
@@ -869,8 +852,6 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
         //recordAu.setVisibility(View.GONE);
         //playAu.setVisibility(View.GONE);
     }
-
-
     public void detener() {
         bandera = 4;
         runAudio = 0;
@@ -885,7 +866,6 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
         playAu.setVisibility(View.VISIBLE);
         playAu.setEnabled(true);
     }
-
     public void reproducir() {
         if(correr == true){
             Toast.makeText(getActivity(), "LO SENTIMOS, DEBE DETENER LA GRABACIÓN ", Toast.LENGTH_SHORT).show();
@@ -907,7 +887,6 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
         //Toast.makeText(getActivity().getApplicationContext(), "reproducción de audio", Toast.LENGTH_LONG).show();
         audioBase64();
     }
-
     public void audioBase64(){
         //CONVERTIR AUDIO A BASE64
         InputStream inputStream = null;
@@ -940,10 +919,8 @@ public class FormNotificacion911 extends Fragment implements OnMapReadyCallback 
         audioEncodeString = Base64.encodeToString(bytes,Base64.DEFAULT);
         cadenaAudio = audioEncodeString;
     }
-
     //********************* GENERA EL NÚMERO ALEATORIO PARA EL FOLIO *****************************//
-    public void Random()
-    {
+    public void Random(){
         Random random = new Random();
         numberRandom = random.nextInt(9000)*99;
         codigoVerifi = String.valueOf(numberRandom);

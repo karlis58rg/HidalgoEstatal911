@@ -6,17 +6,40 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/emergenciasMenu"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="Menú Principal"/>
         <item
-            android:id="@+id/llamadaMenu"
-            android:title="Llamada 911"
-            />
+            android:id="@+id/avisoPrivacidadMenu"
+            android:icon="@drawable/ic_verified_user_black_24dp"
+            android:title="Aviso de privacidad"/>
         <item
-            android:id="@+id/emergencias911Menu"
-            android:title="Emergencia Multimedia"/>
-        <item
-            android:id="@+id/transporteMenu"
-            android:title="Destino Seguro"/>
+            android:id="@+id/terminosCondicionesMenu"
+            android:icon="@drawable/ic_reorder_black_24dp"
+            android:title="Terminos y condiciones"/>
     </group>
+
+    <item android:title="Funciones">
+        <menu>
+            <item
+                android:id="@+id/llamadaMenu"
+                android:icon="@drawable/ic_phone_black_24dp"
+                android:title="Llamada 911"/>
+            <item
+                android:id="@+id/emergencias911Menu"
+                android:icon="@drawable/ic_add_alert_black_24dp"
+                android:title="Emergencia Multimedia"/>
+            <item
+                android:id="@+id/transporteMenu"
+                android:icon="@drawable/ic_add_location_black_24dp"
+                android:title="Destino Seguro"/>
+            <item
+                android:id="@+id/salirApp"
+                android:icon="@drawable/ic_input_black_24dp"
+                android:title="Salir"/>
+        </menu>
+    </item>
+
+
+
 
 </menu>

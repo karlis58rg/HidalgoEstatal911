@@ -28,8 +28,8 @@ public class MenuEmergencias extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view_menu);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.emergenciasMenu,R.id.emergencias911Menu,R.id.transporteMenu,R.id.llamadaMenu)
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.avisoPrivacidadMenu,R.id.terminosCondicionesMenu,
+                R.id.emergenciasMenu,R.id.emergencias911Menu,R.id.transporteMenu,R.id.llamadaMenu,R.id.salirApp)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_menu);

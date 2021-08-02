@@ -11,6 +11,16 @@
         android:label="Menú"
         tools:layout="@layout/emergencias_menu_fragment" />
     <fragment
+        android:id="@+id/avisoPrivacidadMenu"
+        android:name="mx.gob.hidalgo.hidalgoestatal911.ui.MenuAvisoPrivacidad.AvisoPrivacidadMenu"
+        android:label="Aviso de privacidad"
+        tools:layout="@layout/aviso_privacidad_menu_fragment" />
+    <fragment
+        android:id="@+id/terminosCondicionesMenu"
+        android:name="mx.gob.hidalgo.hidalgoestatal911.ui.MenuTerminosCondiciones.TerminosCondicionesMenu"
+        android:label="Terminos y condiciones"
+        tools:layout="@layout/terminos_condiciones_menu_fragment" />
+    <fragment
         android:id="@+id/emergencias911Menu"
         android:name="mx.gob.hidalgo.hidalgoestatal911.ui.MenuEmergencias.Emergencias911Menu"
         android:label="Emergencia Multimedia"
@@ -25,4 +35,9 @@
         android:name="mx.gob.hidalgo.hidalgoestatal911.ui.MenuLlamada.LlamadaMenu"
         android:label="Llamada al 911"
         tools:layout="@layout/llamada_menu_fragment" />
+    <fragment
+        android:id="@+id/salirApp"
+        android:name="mx.gob.hidalgo.hidalgoestatal911.ui.MenuSalir.Salir"
+        android:label="salir_fragment"
+        tools:layout="@layout/salir_fragment" />
 </navigation>
